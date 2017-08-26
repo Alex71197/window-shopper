@@ -8,6 +8,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
@@ -49,17 +54,54 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOh-hA-OSr">
+                                <rect key="frame" x="36" y="300" width="303" height="68.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="50"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjW-hH-pHz">
+                                <rect key="frame" x="137.5" y="373.5" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jNm-G2-Xy7"/>
+                                    <constraint firstAttribute="width" constant="100" id="mAe-Md-qeA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afo-hb-Bhe">
+                                <rect key="frame" x="36" y="627" width="303" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="TmK-Ew-7xD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                <state key="normal" title="Clear Calculator">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearCalcPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GtN-nz-pok"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="pVt-vP-EEN" firstAttribute="trailing" secondItem="hQ4-Go-2eO" secondAttribute="trailing" id="086-Hh-iPF"/>
                             <constraint firstItem="c35-Gd-onU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3Xu-4z-3lc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Afo-hb-Bhe" secondAttribute="trailing" constant="20" id="7ca-Lj-n0P"/>
+                            <constraint firstItem="fjW-hH-pHz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9MC-if-OmL"/>
                             <constraint firstItem="YSQ-8a-ote" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DhR-bY-uJX"/>
                             <constraint firstItem="YSQ-8a-ote" firstAttribute="top" secondItem="ycn-Js-DOU" secondAttribute="bottom" constant="35" id="Fx3-FN-p3M"/>
                             <constraint firstItem="hQ4-Go-2eO" firstAttribute="top" secondItem="YSQ-8a-ote" secondAttribute="bottom" constant="35" id="HjS-tz-TXT"/>
+                            <constraint firstItem="Ks9-dT-FMX" firstAttribute="top" secondItem="Afo-hb-Bhe" secondAttribute="bottom" constant="20" id="MSl-cs-Cdi"/>
+                            <constraint firstItem="YOh-hA-OSr" firstAttribute="width" secondItem="pVt-vP-EEN" secondAttribute="width" id="Qr5-A8-rYp"/>
+                            <constraint firstItem="fjW-hH-pHz" firstAttribute="top" secondItem="YOh-hA-OSr" secondAttribute="bottom" constant="5" id="S88-EA-ToE"/>
+                            <constraint firstItem="Afo-hb-Bhe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="U1c-N9-WWL"/>
+                            <constraint firstItem="YOh-hA-OSr" firstAttribute="top" secondItem="pVt-vP-EEN" secondAttribute="bottom" constant="45" id="UBp-9m-qAS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hQ4-Go-2eO" secondAttribute="trailing" constant="20" id="Uib-3b-GpB"/>
                             <constraint firstItem="pVt-vP-EEN" firstAttribute="top" secondItem="hQ4-Go-2eO" secondAttribute="bottom" constant="25" id="Ywz-ft-O9P"/>
                             <constraint firstItem="Ks9-dT-FMX" firstAttribute="top" secondItem="c35-Gd-onU" secondAttribute="bottom" id="cQy-kj-sX7"/>
+                            <constraint firstItem="YOh-hA-OSr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cX4-hb-2hP"/>
                             <constraint firstAttribute="trailing" secondItem="c35-Gd-onU" secondAttribute="trailing" id="dat-ai-VTx"/>
                             <constraint firstItem="c35-Gd-onU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pse-wi-XTd"/>
                             <constraint firstItem="pVt-vP-EEN" firstAttribute="leading" secondItem="hQ4-Go-2eO" secondAttribute="leading" id="stT-Fd-3uu"/>
@@ -68,7 +110,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="hoursLbl" destination="fjW-hH-pHz" id="Oqt-SJ-siJ"/>
                         <outlet property="priceTxt" destination="pVt-vP-EEN" id="9sI-F0-rGb"/>
+                        <outlet property="resultLbl" destination="YOh-hA-OSr" id="sys-bb-CJa"/>
                         <outlet property="wageTxt" destination="hQ4-Go-2eO" id="dPi-Pm-k77"/>
                     </connections>
                 </viewController>
